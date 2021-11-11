@@ -47,9 +47,7 @@ public class Arrays {
         for (int i = 0; i < numerosDos.length; i++) { //aquí tomará el valor de la variable -1. En este caso significa, hasta menor que 10
             System.out.println(numerosDos[i]);
         }
-
-
-        }
+        
 
     }//fin de main
 }// fin de clase
