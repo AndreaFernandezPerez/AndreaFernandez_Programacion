@@ -28,6 +28,9 @@ public class Arrays {
         String [] palabras = new String [3];// [null, null, null] como es un tipo complejo, NO tiene valor
         double [] decimales = new double[2];//en este caso no es necesario poner new double [], y si lo pongo NO hay que poner el número entre los corchetes
 
+        //tipo[]cosas = guardar diferentes tipos (int string boolean)
+        Object [] cositas = {1, "hola", numerosDos};
+
         /**
          * De los arrays nos interesa saber:
          * 1. Saber el valor de una posicion
@@ -37,7 +40,7 @@ public class Arrays {
          */
 
         //Para saber cual es la longitud
-        int longitudArray = numerosDos.length; // con esto preguntamos por la longitud del array
+        int longitudArray = numerosDos.length; // con esto preguntamos por la longitud (sus posiciones) del array
         System.out.println(longitudArray);
 
         //Como sacar el valor de una posicion. RECUERDA: SIEMPRE se empieza en cero
@@ -47,7 +50,30 @@ public class Arrays {
         for (int i = 0; i < numerosDos.length; i++) { //aquí tomará el valor de la variable -1. En este caso significa, hasta menor que 10
             System.out.println(numerosDos[i]);
         }
-        
+
+        //modificar una posición concreta del array
+        numerosDos[7] = 88; //A partir de este momento, en vez de estar en valor 8 en la posición 7, ahora habrá un 88.
+
+        //meter en un array de 15 posiciones, 15 número aleatorios entre el 0 y el 50, en el menor número de líneas posibles
+
+        int [] numerosAleatorios = new int [15];
+        for (int i = 0; i < numerosAleatorios.length; i++) {
+            int aleatorio = (int)(Math.random()*51);
+            numerosAleatorios [i] = aleatorio;
+            System.out.println(numerosAleatorios[i]);
+        }
+        //una vez generados los números, indicar cuantos pares e impare hay en la colección
+
+        int numeroPares = 0, numeroImpar = 0;
+        for (int i = 0; i < 15; i++) {
+            if (numerosAleatorios[i] %2 == 0){
+                numeroPares++;
+            }else {
+                numeroImpar++;
+            }
+        }
+        System.out.printf("El número de pares que hay es %d%n y el número de impares es %d", numeroPares, numeroImpar);
+
 
     }//fin de main
 }// fin de clase
