@@ -1,7 +1,7 @@
 public class Arrays {
     public static void main(String[] args) {
         /**
-         * int numeroD0s = 9; solo guarda una cosa
+         * int numeroDos = 9; solo guarda una cosa
          * String palabra = "blabla"; solo guarda una cosa
          *
          * Los arrays es un conjunto de datos (colección) con un tamaño fijo. Todas las posiciones están rellenas (aunque solo utilicemos algunos huecos)
@@ -33,8 +33,8 @@ public class Arrays {
 
         /**
          * De los arrays nos interesa saber:
-         * 1. Saber el valor de una posicion
-         * 2. Cuantos elementos tiene
+         * 1. El valor de una posicion
+         * 2. Cuantos elementos tiene (longitud)
          * 3. Como doy valor a una posicion (modificarlos)
          * 4. Como saco todos los valores
          */
