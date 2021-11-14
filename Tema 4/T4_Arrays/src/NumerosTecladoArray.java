@@ -11,7 +11,10 @@ public class NumerosTecladoArray {
             int numeroIntroducido = teclado.nextInt();
             numerosTeclado[i] = numeroIntroducido;
         }
-        System.out.println(numerosTeclado.length);
+        System.out.println(numerosTeclado[0]);
+        for (int i = 0; i < numerosTeclado.length; i++) {
+            System.out.println("Posición " + i + " - " + numerosTeclado[i]);
+        }
 
         teclado.close();
 
