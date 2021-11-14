@@ -7,12 +7,11 @@ public class NumerosTecladoArray {
         int [] numerosTeclado = new int[10];
 
         for (int i = 0; i < numerosTeclado.length; i++) {
-            int numeroIntroducido;
             System.out.println("Introduce un número");
-            numeroIntroducido = teclado.nextInt();
+            int numeroIntroducido = teclado.nextInt();
             numerosTeclado[i] = numeroIntroducido;
-            System.out.println(numerosTeclado[i]);
         }
+        System.out.println(numerosTeclado.length);
 
         teclado.close();
 
