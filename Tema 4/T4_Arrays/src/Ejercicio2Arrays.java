@@ -17,7 +17,7 @@ public class Ejercicio2Arrays {
         for (int i = 0; i < numeros.length; i++) {
             media = suma/numeros.length;
         }
-        System.out.println("La me dia es igual a " + media);
+        System.out.println("La media es igual a " + media);
 
 
 
