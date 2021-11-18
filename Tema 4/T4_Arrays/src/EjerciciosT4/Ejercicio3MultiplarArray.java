@@ -21,14 +21,14 @@ public class Ejercicio3MultiplarArray {
             numeros[i] *= 2;
         }
 
-        //sumamos los valores del array
-        for (int i = 0; i < numeros.length; i++) {
-            suma += numeros[i];
+        //sumamos los valores del array con un for each
+        for (int item : numeros) {
+            suma += item;
         }
 
         //imprimimos por consola
         System.out.println("La suma de todos los datos es: " + suma);
-        System.out.println("La media es: " +  suma/ numeros.length);
+        System.out.println("La media es: " +  (double)suma/ (double) numeros.length);//ponemos double por si acaso la media es con decimales
 
 
         lecturaTeclado.close();
