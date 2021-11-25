@@ -32,17 +32,5 @@ public class ArraysMultidimensionales {
             System.out.println("\n");
         }
 
-        System.out.println("Vemos los valores de todo el array por filas");
-        //Hacemos un primer for para "ver" las filas
-        for (int i = 0; i < arrayMultiDiferente.length; i++) {
-            //una vez dentro, hacemos otro for para ver las columnas
-            //si ponemos arrayMulti.length, solo cogería el número de filas, para especificar las columnas arrayMulti[i].length, vemos el largo de cada una de las filas
-            for (int j = 0; j < arrayMultiDiferente[i].length; j++) {
-                System.out.print(arrayMultiDiferente[i][j] + " ");
-            }
-            System.out.println("\n");
-        }
-
-
     }//fin de main
 }//fin de clase
