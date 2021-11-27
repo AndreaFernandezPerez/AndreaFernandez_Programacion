@@ -26,7 +26,7 @@ public class Ejercicio3 {
                 System.out.println(numeros[i] + ", ");
             }
             else if (i <= 9 ){
-            System.out.println(numeros[i] + ", ");
+            System.out.println(numeros[i]);
             }
         }
 

@@ -58,6 +58,8 @@ public class Ejercicio7 {
                         pequenia = item;
                     }
                 }
+                System.out.println("La palabra menor es: " + pequenia);
+                System.out.println("La palabra mayor es: " + grande);
                 break;
         }//fin de swithc
 
