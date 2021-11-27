@@ -55,16 +55,18 @@ public class Ejercicio7Base {
                     String pequenia = "aaaaaaaaaaaaaaaaa";
 
                     for (String item : palabras) {
+
                         item.length();
+
                         if (item.length() > grande.length()){
-                            item = grande;
+                            grande = item;
                         }
                         if (item.length() < pequenia.length()){
                             pequenia = item;
                         }
                     }
                     System.out.println("La palabra mayor es: " + grande);
-                    System.out.println("La palabra menos es: " + pequenia);
+                    System.out.println("La palabra menor es: " + pequenia);
 
                     /*for (int i = 0; i < palabras.length; i++) {
                         if (palabras.length > grande.length()){
