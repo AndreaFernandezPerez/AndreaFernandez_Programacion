@@ -39,7 +39,7 @@ public class Ejercicio6PosicionesArray {
             if (numeros[i] == numeros[numeros.length-1]){
                 numeros[i] = primera;
             }else {
-                numeros[i] = numeros [i +1];
+                numeros[i] = numeros [i + 1];
             }
         }
         System.out.println("Rotamos un valor a la izquierda");

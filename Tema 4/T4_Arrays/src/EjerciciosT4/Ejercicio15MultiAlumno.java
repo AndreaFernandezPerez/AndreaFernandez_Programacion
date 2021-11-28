@@ -47,7 +47,7 @@ public class Ejercicio15MultiAlumno {
             if (convalidada == true){
                 System.out.printf("%s tiene una media de %.2f, %d suspensas y tiene asignaturas convalidadas \n", nombre, media, suspensas, convalidada);
             }else {
-                System.out.printf("%s tiene una media de %.2f, %d suspensas y tiene asignaturas convalidadas\n", nombre, media, suspensas, convalidada);
+                System.out.printf("%s tiene una media de %.2f, %d suspensas y no tiene asignaturas convalidadas\n", nombre, media, suspensas, convalidada);
             }
         }
 
