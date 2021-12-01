@@ -42,8 +42,8 @@ public class Ejercicio1 {
                     if (longitud > 0){
                         for (int i = 0; i < numeros.length; i++) {
                             if (numeros[i] > 10 && numeros[i] %2 == 0){
+                                System.out.println(numeros[i]);
                             }
-                            System.out.println(numeros[i]);
                         }
                     }else {
                         System.out.println("No ha introducido una longitud");
