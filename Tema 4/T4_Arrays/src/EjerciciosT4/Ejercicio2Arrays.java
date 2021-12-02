@@ -1,3 +1,5 @@
+package EjerciciosT4;
+
 public class Ejercicio2Arrays {
     public static void main(String[] args) {
         int numeros [] = new int[30];

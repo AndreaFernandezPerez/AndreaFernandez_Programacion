@@ -1,3 +1,5 @@
+package EjerciciosT4;
+
 public class Ejercicio4 {
     public static void main(String[] args) {
         int cuadrado [] = new int[20];
