@@ -7,6 +7,7 @@ public class Ejercico9GeneradorPalabras {
         Scanner sc = new Scanner(System.in);
         int palabrasGenerar;
         char [] abecedario = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        String [] palabras = null;
 
         System.out.println("Cuantas palabras quieres generar");
         palabrasGenerar = sc.nextInt();
