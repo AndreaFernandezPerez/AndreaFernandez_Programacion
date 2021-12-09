@@ -10,7 +10,7 @@ public class Ejercicio12Champions {
 
         for (int i = 0; i < bomboUno.length; i++) {
             int aleatorioUno = (int)(Math.random()*bomboUno.length);
-            int aleatorioDos = (int)(Math.random()*bomboUno.length);
+            int aleatorioDos = (int)(Math.random()*bomboDos.length);
 
             String equipoGeneradoB1 = bomboUno[aleatorioUno];
             String equipoGeneradoB2 = bomboUno[aleatorioDos];
