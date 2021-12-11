@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Predicate;
 
 public class Colecciones {
     /*
@@ -114,18 +115,32 @@ public class Colecciones {
             }
         }
         System.out.println(listaCosas);
-         */
-
-
         //como lo ha hecho borja
+
+        /*
         for (int i = 0; i < listaCosas.size(); i++) {
-            if (listaCosas.get(i).equals(6)) {
+           /* if (listaCosas.get(i).equals(6)) {
                 listaCosas.remove(i);
+            }
+            Esto es lo que yo hice
+
+            if (listaCosas.get(i) instanceof Integer){ //evaluamos primero si es un número entero
+                if (((int)listaCosas.get(i)) == 6){ //y después preguntamos la condición
+                    listaCosas.remove(i);
+                }
             }
         }
         System.out.println(listaCosas);
 
+         */
 
+        listaCosas.removeIf(new Predicate() {
+            @Override
+            public boolean test(Object o) {
+                return o.equals(6);
+            }
+        });
+        System.out.println(listaCosas);
 
 
         sc.close();
