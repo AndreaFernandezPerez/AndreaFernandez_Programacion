@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ColeccinesTipadas {
     public static void main(String[] args) {
-        ArrayList<Integer> listaNumeros = new ArrayList();
+        ArrayList<Integer> listaNumeros = new ArrayList(); //en los tipados <> siempre se ponen datos complejos --> String / Integer...
         ArrayList<String > listaPalabras = new ArrayList();
         ArrayList<int[]> listaPersonas = new ArrayList<>(); //creamos un arrayList de arrays
 
