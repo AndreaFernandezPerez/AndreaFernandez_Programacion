@@ -1,3 +1,4 @@
+import java.util.Enumeration;
 import java.util.Hashtable;
 
 public class ListaHash {
@@ -27,6 +28,24 @@ public class ListaHash {
         //Borrar un elemento
         listaElementos.remove("1"); // en este caso eleminariamos "Elemento 1"
         listaElementos.get("1");//esto ya no devolvería nada, porque esa key ya no existe
+
+        // buscar con que nos puede imprimir todos los valores
+        listaElementos.elements(); //devuelve directamente los elementos
+        listaElementos.keys();//devuelve directamente las claves
+        listaElementos.keySet(); // con este se podría buscar con un foreach
+        listaElementos.values();
+
+        //como obtener/imprimir los datos del HashTable con .keys()
+
+        System.out.println("Imprimimos todos los datos");
+        Enumeration<Object> listaClaves = listaElementos.keys(); //lo hemos tipado como Object, xq el hashtable, así están tipadas las claves
+
+        while (listaClaves.hasMoreElements()){ //si, listaClaves contiene mas elementos --> entramos en el while
+            //hay elemento siguiente
+            Object clave = listaClaves.nextElement();// con esto nos coge el elemento, la clave
+            Object elemento = listaElementos.get(clave);
+            System.out.println(elemento);
+        }
 
 
     }//fin de main
