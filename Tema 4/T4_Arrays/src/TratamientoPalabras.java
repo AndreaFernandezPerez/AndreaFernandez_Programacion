@@ -22,7 +22,7 @@ public class TratamientoPalabras {
         }else {
             System.out.println("Son diferentes");
         }
-
+        //comparamos ignorando si hay mayusculas o minusculas
         if (palabraTratar.equalsIgnoreCase(palabraComparar)){
             System.out.println("son iguales");
         }else {
@@ -34,21 +34,21 @@ public class TratamientoPalabras {
         //Saber cuantos caracteres tengo
         System.out.println(fraseCompleta.length());
 
-        //Saber cuantas palabras tengo. Creamos un String de palabras y dividimos el String con split por donde queremos cortarlas, en este caso por el espacio
+        //Saber cuantas palabras tengo. Creamos un array de palabras (String) y dividimos el String con split por donde queremos cortarlas, en este caso por el espacio
         String [] palabras = fraseCompleta.split(" ");
         System.out.println("El número de palabras es: " + palabras.length);//con esto sabemos cuantas palabras tenemos (valores del array)
 
         //saber cuantas letras tenemos
         int letrasTotales = 0;
         for (String item: palabras) {
-            item.length(); //esto es cuantas letras tengo en la pabra que me toca
+            item.length(); //esto es cuantas letras tengo en la palabra que me toca
             letrasTotales += item.length(); //sumamos todas las letras que tenemos
         }
         System.out.println("El número total de letras es: " + letrasTotales);
 
         //remplazamos valores. Podemos concatenar tantos valores como queramos
-        fraseCompleta.replaceAll(" ", "").replaceAll(",", "");
-        System.out.println("El número de letras es: " + fraseCompleta.replaceAll(" ", "").length()); //primer valor --> lo que queremos remplazar, segundo valor --> por lo que lo remplazo
+        fraseCompleta.replaceAll(" ", "").replaceAll(",", ""); //primer valor --> lo que queremos remplazar, segundo valor --> por lo que lo remplazo
+        System.out.println("El número de letras es: " + fraseCompleta.replaceAll(" ", "").length());
 
         //Con esto pedimos la letra que queremos en una posición
         fraseCompleta.charAt(0);

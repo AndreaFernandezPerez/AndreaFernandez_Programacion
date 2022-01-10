@@ -115,11 +115,11 @@ public class Colecciones {
             }
         }
         System.out.println(listaCosas);
+
         //como lo ha hecho borja
 
-        /*
         for (int i = 0; i < listaCosas.size(); i++) {
-           /* if (listaCosas.get(i).equals(6)) {
+            if (listaCosas.get(i).equals(6)) {
                 listaCosas.remove(i);
             }
             Esto es lo que yo hice
