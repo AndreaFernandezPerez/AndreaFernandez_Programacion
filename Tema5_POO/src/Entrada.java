@@ -28,6 +28,13 @@ public class Entrada {
 
         usuario1.setPassword("contrasenia");
         System.out.println(usuario1.getPassword());
+        usuario1.mostrarDatos();
+
+        System.out.println(usuario1.mostrarDatosRetorno());
+
+        usuario1.saludar("Pepe");
+
+        usuario1.saludar(usuario3);
 
 
     }//fin de main

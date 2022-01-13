@@ -13,7 +13,7 @@ public class Usuario {
 
     public Usuario(){
         //este constructor es recomendable escribirlo siempre, para evitar problemas, aunque esté vacio
-        nombre = "Por defector";
+        nombre = "Por defecto";
         correoElectronico = "Por defecto";
         edad = 18;
     }
@@ -35,9 +35,33 @@ public class Usuario {
 
     //métodos: todas aquellas funcionalidades, que esta clase podrá tener
 
+    public void mostrarDatos (){  //metodo sin retorno, solo ejecuta, por el void
+        System.out.println("Nombre " + nombre);
+        System.out.println("Contraseña " + password);
+        System.out.println("Email " + correoElectronico);
+        System.out.println("Fecha " + fecha);
+        System.out.println("Edad " + edad);
+    }
+
+    public String mostrarDatosRetorno (){ //metodo con retorno
+        nombre = "Otra cosa" ;
+        return "Nombre " + nombre + "\n" + "Apellido " + apellido;
+    }
+
+    public void saludar (String nombreSaludar){
+        System.out.println("Hola " + nombreSaludar + ", ¿qué tal estás?");
+    }
+
+    public void saludar (Usuario usuario) {
+        System.out.println("Hola soy "+ nombre + " y voy a saludar a " + usuario.getNombre() + ", ¿qué tal estás?");
+    }
+
+
     //métodos: getter y setter --> son los métodos por los que se pueden devolver los datos de las variables
 
     //getter de password --> el getter coge un valor y lo devuelve
+    //devuelve un valor pedido
+
     public String getPassword(){
         return password;
     }
@@ -58,9 +82,11 @@ public class Usuario {
     }
 
     //setter de pass --> pone un valor, no retorna nada
+
     public void setPassword(String password){
         this.password = password;
     }
+
     public void setCorreoElectronico(String correoElectronico){
         this.correoElectronico = correoElectronico;
     }
