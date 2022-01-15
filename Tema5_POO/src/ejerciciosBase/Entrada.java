@@ -44,6 +44,9 @@ public class Entrada {
         persona2.mostrarDatos();
         persona3.mostrarDatos();
 
+        System.out.println("\nMostramos IMC");
+        System.out.println(persona1.calcularImc());
+
 
         sc.close();
 

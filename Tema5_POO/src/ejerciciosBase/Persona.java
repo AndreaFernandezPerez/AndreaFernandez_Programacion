@@ -8,15 +8,15 @@ public class Persona {
     private double peso;
 
     //Constructores
+
+    //crear un constructor que permita crear una persona sin datos de entrada. Los inicializará todos a "datos por defecto", 11111111X, y 0 respectivamente
     public Persona (){
-        nombre = "Por defecto";
-        apellido = "Por defecto";
-        dni = "11111111X";
-        edad = 0;
-        altura = 0;
-        peso = 0.0;
+        this.nombre = "Por defecto";
+        this.apellido = "Por defecto";
+        this.dni = "11111111X";
     }
 
+    //constructor que permita crear una persona con todos los datos
     public Persona (String nombre, String apellido, String dni, int edad, double peso, int altura){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -26,6 +26,7 @@ public class Persona {
         this.altura = altura;
     }
 
+    //crear un constructor que permita crear una persona sin peso ni altura
     public Persona (String nombre, String apellido, String dni, int edad){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -33,6 +34,7 @@ public class Persona {
         this.edad = edad;
     }
 
+    //crear un constructo que permita crear una persona con nombre y apellidos, el resto de datos los pondrá a 0, excepto el dni que pondrá 11111111X
     public Persona (String nombre, String apellido){
         this.nombre = nombre;
         this.apellido = apellido;
@@ -41,6 +43,7 @@ public class Persona {
 
     //Métodos
 
+    //crear un metodo mostrarDatos que sacará por pantalla los datos de la persona formateado
     public void mostrarDatos (){
         System.out.println("Nombre " + nombre);
         System.out.println("Apellido " + apellido);
@@ -48,10 +51,28 @@ public class Persona {
         System.out.println("Edad " + edad);
         System.out.println("Peso " + peso);
         System.out.println("Altura " + altura);
+
+        //tambien podemos poner
+        //System.out.printf("Nombre: %s\nApellido: %s\nEdad: %d, nombre, apellido, edad");
+    }
+
+    public int incrementarEdad (int cantidadSumar){
+        return this.edad += cantidadSumar;
+    }
+
+    public double calcularImc (){
+        this.edad = edad;
+        this.peso = peso;
+        this.altura = altura;
+
+        double imc = peso/(altura*edad);
+
+        return imc;
     }
 
     //Métodos getter y setter
 
+    //get obtener el valor de la variable
     public String getNombre() {return nombre;}
     public String getApellido () {return apellido;}
     public String getDni() {return dni;}
@@ -59,6 +80,7 @@ public class Persona {
     public int getAltura() {return altura;}
     public double getPeso() {return peso;}
 
+    //set modificar el valor de la variable
     public void setNombre (String nombre) {this.nombre = nombre;}
     public void setApellido(String apellido) {this.apellido = apellido;}
     public void setDni (String dni) {this.dni = dni;}

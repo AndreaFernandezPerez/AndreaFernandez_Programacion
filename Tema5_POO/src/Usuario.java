@@ -21,6 +21,7 @@ public class Usuario {
     public Usuario(String nombre, String correoElectronico, String password){//esto es un constructor - Las variables no son las mismas que hemos creado anteriormente
         this.nombre = nombre; //relacionamos las variables de arriba con las del constructor. Cuando ponemos this. referencia a las variables definidas al principio.
                               //lo ponemos así porque las variables se llaman igual
+                            //this. hace referencia a las variables principales, las que hemos puesto en la parte superior
         this.correoElectronico = correoElectronico;
         this.password = password;
     }
@@ -61,6 +62,7 @@ public class Usuario {
 
     //getter de password --> el getter coge un valor y lo devuelve
     //devuelve un valor pedido
+    //get obtener el valor de la variable
 
     public String getPassword(){
         return password;
@@ -82,6 +84,7 @@ public class Usuario {
     }
 
     //setter de pass --> pone un valor, no retorna nada
+    //set modificar el valor de la variable
 
     public void setPassword(String password){
         this.password = password;
