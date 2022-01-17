@@ -56,18 +56,31 @@ public class Persona {
         //System.out.printf("Nombre: %s\nApellido: %s\nEdad: %d, nombre, apellido, edad");
     }
 
-    public int incrementarEdad (int cantidadSumar){
-        return this.edad += cantidadSumar;
+    public void incrementarEdad (int cantidadSumar){
+        this.edad += cantidadSumar; //no es necesario poner el this, porque el parámetro no se llama igual (parámetro incrementarEdad)
     }
 
+    //método que calcula y devuelve IMC
     public double calcularImc (){
-        this.edad = edad;
-        this.peso = peso;
-        this.altura = altura;
-
-        double imc = peso/(altura*edad);
+        double imc = this.peso/Math.pow(this.altura,2);
 
         return imc;
+    }
+
+    //método para mostrar por consola el estado físico. Ejercicio 4
+    public String estadoIMC (){
+        double IMC = calcularImc()*10000; //llamamos al valor de imc del método anterior
+        String estado = "";
+        if (IMC < 18.5){
+            estado = "inferior a normal";
+        }else if (IMC > 18.5 && IMC < 24.9){
+            estado = "nomal";
+        }else if (IMC > 24.9 && IMC < 30.0){
+            estado = "peso superior a lo normal";
+        }else {
+            estado = "obesidad";
+        }
+        return estado;
     }
 
     //Métodos getter y setter
