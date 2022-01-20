@@ -19,7 +19,7 @@ public class Circulo {
         area = (Math.PI)*Math.pow(radio,2);
         return area;
     }
-    public double diametro(){
+    public double calcularDiametro(){
         diametro = 2*radio;
         return diametro;
     }

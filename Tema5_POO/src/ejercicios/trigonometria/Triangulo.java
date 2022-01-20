@@ -16,8 +16,10 @@ public class Triangulo {
     }
 
     //métodos
-    public void calcularArea (){
+    public double calcularArea (){
+
         area = (base*altura)/2;
+        return area;
     }
 
     //métodos getter y setter
