@@ -26,14 +26,22 @@ public class Entrada {
         System.out.println(usuario1.password);
          */
 
+        //así modificamos el valor de una variable de la clase usuario, pero no se puede mostrar en pantalla directamente
         usuario1.setPassword("contrasenia");
+        //para poder ver los valores hay que hacer un sout y llamarlo a través del getter
         System.out.println(usuario1.getPassword());
+
+        //de esta manera "llamamos" al método mostrar datos y al no tener retorno (estar vacio void),
+        //ejecuta-imprime lo que tiene
         usuario1.mostrarDatos();
 
+        //para poder mostrar los datos del método mostrarDatosRetorno, hay que hacer un sout, xq es un metodo con retorno
         System.out.println(usuario1.mostrarDatosRetorno());
 
+        //imprimimos método saludar que tiene argumento String
         usuario1.saludar("Pepe");
 
+        //imprimimos método saludar que tiene argumento/variable tipo Usuario
         usuario1.saludar(usuario3);
 
 

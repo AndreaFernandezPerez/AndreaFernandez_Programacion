@@ -22,6 +22,7 @@ public class Usuario {
         this.nombre = nombre; //relacionamos las variables de arriba con las del constructor. Cuando ponemos this. referencia a las variables definidas al principio.
                               //lo ponemos así porque las variables se llaman igual
                             //this. hace referencia a las variables principales, las que hemos puesto en la parte superior
+                            // ylas que no tienen this. son las variables que están dentro de ( ) de este constructor
         this.correoElectronico = correoElectronico;
         this.password = password;
     }
@@ -50,6 +51,7 @@ public class Usuario {
     }
 
     public void saludar (String nombreSaludar){
+
         System.out.println("Hola " + nombreSaludar + ", ¿qué tal estás?");
     }
 
