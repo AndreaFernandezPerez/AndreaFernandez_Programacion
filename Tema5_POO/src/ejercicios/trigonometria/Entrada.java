@@ -2,14 +2,9 @@ package ejercicios.trigonometria;
 
 public class Entrada {
 
-    public static void main(String[] args) {
+    Triangulo triangulo1 = new Triangulo(5, 9);
 
-        Asignatura asignatura1 = new Asignatura();
+    Circulo circulo1 = new Circulo(5);
 
-        Asignatura asignatura2 = new Asignatura(10);
-
-
-
-    }//fin de main
 
 }//fin de clase

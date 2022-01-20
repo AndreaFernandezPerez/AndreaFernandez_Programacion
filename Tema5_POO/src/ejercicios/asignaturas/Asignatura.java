@@ -1,4 +1,4 @@
-package ejercicios.trigonometria;
+package ejercicios.asignaturas;
 
 public class Asignatura {
 
@@ -13,7 +13,7 @@ public class Asignatura {
 
     }
     public Asignatura (int id) {
-
+        this.id = id;  //hace falta declarar la variable id?
     }
 
     //métodos
@@ -36,4 +36,5 @@ public class Asignatura {
     public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
     }
+
 }//fin de clase
