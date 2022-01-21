@@ -29,5 +29,21 @@ public class Entrada {
             System.out.printf("El ganador es %s %s con %.2f", cocheB.getModelo(),cocheB.getMatricula(),cocheB.getKmRecorridos());
         }
 
+        int kmEtapa = 10000;
+
+        do {
+            cocheA.acelerar((int)(Math.random()*11));
+            cocheB.acelerar((int)(Math.random()*11));
+
+        }while (cocheA.getKmRecorridos() <= kmEtapa || cocheB.getKmRecorridos() <= kmEtapa );
+
+        if (cocheA.getKmRecorridos() >= cocheB.getKmRecorridos()){
+            System.out.printf("El ganador es %s %s con %f km recorridos \n", cocheA.getModelo(), cocheA.getMatricula(), cocheA.getKmRecorridos());
+        }else if (cocheB.getKmRecorridos() >= cocheA.getKmRecorridos()){
+            System.out.printf("El ganador es %s %s con %f km recorridos\n", cocheB.getModelo(), cocheB.getMatricula(), cocheB.getKmRecorridos());
+        }
+
+
+
     }//fin de main
 }//fin de clase
