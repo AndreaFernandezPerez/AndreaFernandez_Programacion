@@ -8,8 +8,15 @@ public class Entrada {
         int opcion;
 
         Triangulo triangulo1 = new Triangulo(5, 9);
+        triangulo1.calcularArea2(); // no devuelve nada, solo ejecuta y guarda el dato del area
+        System.out.println("El area es: " + triangulo1.getArea());
+        triangulo1.calcularArea();//esto me devolvería el dato, pero no lo imprimiría
 
         Circulo circulo1 = new Circulo(5);
+        circulo1.calcularArea2();
+        circulo1.calcularDiametro2();
+        System.out.println("El area es: " + circulo1.getArea());
+        System.out.println("El diametro es: " + circulo1.getDiametro());
 
         Cuadrado cuadrado1 = new Cuadrado(10, 15);
 
@@ -37,13 +44,13 @@ public class Entrada {
                     int altura = sc.nextInt();
                     triangulo1.setBase(altura);
 
-                    System.out.println("Que operación quieres hacer");
-                    System.out.println("1. Calcular el área");
-                    System.out.println("2. Mostrar los datos");
-                    System.out.println("3. Salir");
-                    opcion = sc.nextInt();
-
                     do {
+                        System.out.println("Que operación quieres hacer");
+                        System.out.println("1. Calcular el área");
+                        System.out.println("2. Mostrar los datos");
+                        System.out.println("3. Salir");
+                        opcion = sc.nextInt();
+
                         switch (opcion){
                             case 1:
                                 System.out.printf("El área es: %.2f\n", triangulo1.calcularArea());
@@ -53,7 +60,10 @@ public class Entrada {
                                 System.out.println("La altura del triángulo es: " + triangulo1.getAltura());
                                 break;
                         }
-                    }while (opcion == 3);
+                    }while (opcion != 3);
+
+                    System.out.println("Pulsa enter para continuar");
+                    sc.next();
                     break;
 
                 case 2:
@@ -114,6 +124,7 @@ public class Entrada {
                     break;
             }
         }while (opcion != 4);
+
 
 
 

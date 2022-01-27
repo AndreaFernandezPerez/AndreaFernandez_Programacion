@@ -16,6 +16,11 @@ public class Triangulo {
     }
 
     //métodos
+
+    public void calcularArea2(){
+        area = (base*altura)/2;
+    }
+
     public double calcularArea (){
 
         area = (base*altura)/2;
