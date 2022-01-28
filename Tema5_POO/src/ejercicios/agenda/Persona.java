@@ -21,6 +21,7 @@ public class Persona {
     //métodos
 
     public void mostrarDatos(){
+
         System.out.printf("Nombre: %s\tDNI: %s\tTeléfono: %d\n", nombre, dni, telefono);
     }
 
