@@ -25,7 +25,7 @@ public class Coche {
 
         this.kmRecorridos = velocidad * (cv * (Math.random()*11));
 
-        if (velocidad >= 180){
+        if (velocidad > 180){
             System.out.println("Ha llegado a su velocidad máxima");
         }
     }
@@ -37,9 +37,12 @@ public class Coche {
             System.out.println("El coche se ha parado");
         }
     }
-    public void parar (){
+    public void parar ()
+    {
         this.velocidad = 0;
+
     }
+
     public void resetear(){
         this.velocidad = 0;
         this.kmRecorridos = 0;

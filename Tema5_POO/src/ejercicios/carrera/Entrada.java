@@ -24,11 +24,12 @@ public class Entrada {
         cocheB.mostrarDatos();
 
         if (cocheA.getKmRecorridos() > cocheB.getKmRecorridos()){
-            System.out.printf("El ganador es %s %s con %.2f", cocheA.getModelo(),cocheA.getMatricula(),cocheA.getKmRecorridos());
+            System.out.printf("El ganador es %s %s con %.2f\n", cocheA.getModelo(),cocheA.getMatricula(),cocheA.getKmRecorridos());
         }else {
-            System.out.printf("El ganador es %s %s con %.2f", cocheB.getModelo(),cocheB.getMatricula(),cocheB.getKmRecorridos());
+            System.out.printf("El ganador es %s %s con %.2f\n", cocheB.getModelo(),cocheB.getMatricula(),cocheB.getKmRecorridos());
         }
 
+        System.out.println("El ganador de la etapa");
         int kmEtapa = 10000;
 
         do {
