@@ -17,7 +17,7 @@ public class Entrada {
         if (agenda.borrarPersona2("987654321q")){
 
         }else {
-            
+
         }
 
         agenda.borrarPersona("12345678P");
@@ -26,7 +26,13 @@ public class Entrada {
         System.out.println("Después de borrar");
         agenda.listar();
 
+        System.out.println("Buscando persona");
+        agenda.buscarPersona("47527179W");
 
+        System.out.println("Editar persona");
+        agenda.editar("47527179W");
+        System.out.println("Imprimimos la editación de la persona");
+        agenda.buscarPersona("47527179W");
 
     }//fin de main
 }//fin de clase

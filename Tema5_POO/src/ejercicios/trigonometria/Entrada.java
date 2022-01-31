@@ -125,9 +125,6 @@ public class Entrada {
             }
         }while (opcion != 4);
 
-
-
-
         sc.close();
 
     }//fin de main
