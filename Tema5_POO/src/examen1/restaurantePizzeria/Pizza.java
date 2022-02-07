@@ -15,13 +15,12 @@ public class Pizza {
     public Pizza(){
 
     }
-    public Pizza(int id, String nombre){
-        this.id = id;
+    public Pizza( String nombre){
+
         this.nombre = nombre;
         listaIngredientes = new ArrayList<>();
     }
-    public Pizza(int id, String nombre, ArrayList listaIngredientes){
-        this.id = id;
+    public Pizza( String nombre, ArrayList listaIngredientes){
         this.nombre = nombre;
         this.listaIngredientes = new ArrayList<>();
     }
@@ -36,6 +35,7 @@ public class Pizza {
     }
 
     public void verDatos(){
+        calcularPrecio();
         System.out.println(nombre);
         System.out.println(id);
         System.out.println(estado);
