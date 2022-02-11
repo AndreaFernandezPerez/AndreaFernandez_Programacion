@@ -41,6 +41,15 @@ public class Entrada {
 
         deportivo.mostrarDatos();
 
+        Concesionario concesionario = new Concesionario();
+        concesionario.agregrarCoche(deportivo);
+        concesionario.agregrarCoche(electrico);
+        concesionario.agregrarCoche(suv);
+        concesionario.agregrarCoche(utilitario);
+
+        concesionario.borrarCoche("3456ygh");
+        System.out.println("Listamos coches");
+        concesionario.listarCoches();
 
     }//fin de main
 

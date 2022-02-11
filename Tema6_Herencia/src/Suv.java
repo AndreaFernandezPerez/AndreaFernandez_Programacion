@@ -19,7 +19,7 @@ public class Suv extends Coche{
     public void calcularVelocidad(int velocidad) {
         super.calcularVelocidad(velocidad);
         int aleatorio = (int)(Math.random()*11)+10;
-        this.velocidad += aleatorio; //this.velocidad es la velocidad/atributo de esta clase, aunqeu no aparezca xq hereda
+        this.velocidad += aleatorio; //this.velocidad es la velocidad/atributo de esta clase, aunque no aparezca xq hereda
     }
 
     @Override
