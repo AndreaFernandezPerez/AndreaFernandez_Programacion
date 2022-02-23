@@ -18,7 +18,7 @@ public class Entrada {
         agenda.editarPersona("98765432q");
         agenda.listarAgenda();
 
-         */
+
 
         Dos agendaDos = new Dos();
         agendaDos.agregar(personaUno);
@@ -28,6 +28,10 @@ public class Entrada {
         agendaDos.buscar("98765432q");
         agendaDos.editar("98765432q");
         agendaDos.borrar("98765432q");
+
+         */
+
+
 
 
     }//fin de main
