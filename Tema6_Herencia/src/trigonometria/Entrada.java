@@ -1,5 +1,6 @@
 package trigonometria;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Entrada {
@@ -72,31 +73,48 @@ public class Entrada {
                     double alturaRect = sc.nextDouble();
                     Rectangulo rectangulo = new Rectangulo(baseRect, alturaRect);
 
-                    do {
-                        System.out.println("Que deseas hacer");
-                        System.out.println("1. Calcular área");
-                        System.out.println("2. Calcular perimetro");
-                        System.out.println("3. Mostrar datos");
-                        System.out.println("4. Salir");
-                        opcionDos = sc.nextInt();
+                    System.out.println("Que deseas hacer");
+                    System.out.println("1. Calcular área");
+                    System.out.println("2. Calcular perimetro");
+                    System.out.println("3. Mostrar datos");
+                    System.out.println("4. Salir");
+                    opcionDos = sc.nextInt();
 
-                        switch (opcionDos){
-                            case 1:
-                                System.out.println(rectangulo.calcularArea());
-                                break;
-                            case 2:
-                                System.out.println(rectangulo.calcularPerimetro());
-                                break;
-                            case 3:
-                                rectangulo.mostrarDatos();
-                                break;
-                        }
-                    }while (opcionDos != 4);
+                    switch (opcionDos){
+                        case 1:
+                            System.out.println(rectangulo.calcularArea());
+                            break;
+                        case 2:
+                            System.out.println(rectangulo.calcularPerimetro());
+                            break;
+                        case 3:
+                            rectangulo.mostrarDatos();
+                            break;
+                    }
+
                     break;
             }
-        }while (opcion != 0);
+        }while (opcion != 4);
 
         sc.close();
+
+        Circulo circulo1 = new Circulo(5);
+        Rectangulo rectangulo1 = new Rectangulo(4, 8);
+        Triangulo triangulo1 = new Triangulo(3, 7);
+        ArrayList<Figura> figuras = new ArrayList<>();
+        figuras.add(circulo1);
+        figuras.add(rectangulo1);
+        figuras.add(triangulo1);
+
+        for (Figura item : figuras) {
+            System.out.println("Imprimiento de la clase " + item.getClass().getSimpleName());
+            System.out.println(item.calcularArea());
+            if (item instanceof Circulo){
+                System.out.println(((Circulo) item).calcularDiametro());
+            }else if (item instanceof Rectangulo){
+                System.out.println(((Rectangulo) item).calcularPerimetro());
+            }
+        }
 
     }//fin de main
 }//fin de clase

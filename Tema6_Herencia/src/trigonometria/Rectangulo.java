@@ -14,19 +14,19 @@ public final class Rectangulo extends Figura{
 
     @Override
     public double calcularArea() {
-        area = base * altura;
-        return super.calcularArea();
+        this.area = this.base * this.altura;
+        return this.area;
     }
 
     public double calcularPerimetro(){
-        perimetro = (base + altura) * 2;
-        return perimetro;
+        this.perimetro = (this.base + this.altura) * 2;
+        return this.perimetro;
     }
 
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
-        System.out.printf("Base: %.2f\nAltura: %.2f\nArea: %.2f\nPerimetro: %.2f\n", base, altura, area, perimetro);
+        System.out.printf("Base: %.2f\nAltura: %.2f\nPerimetro: %.2f\n", base, altura, perimetro);
     }
 
     //getter y setter

@@ -10,14 +10,11 @@ public abstract class Figura {
 
     }
     //métodos
-    public double calcularArea(){
-        return area;
-    }
+    public abstract double calcularArea();
 
     public void mostrarDatos(){
-
+        System.out.println("Area: " + area);
     }
-
 
     //getter y setter
     public double getArea() {

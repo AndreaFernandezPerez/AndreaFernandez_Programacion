@@ -15,13 +15,13 @@ public final class Triangulo extends Figura{
     @Override
     public double calcularArea() {
         area = (base * altura)/2;
-        return super.calcularArea();
+        return area;
     }
 
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
-        System.out.printf("Base: %.2f\nAltura: %.2f\nArea: %.2f", base, altura, area);
+        System.out.printf("Base: %.2f\nAltura: %.2f\n", base, altura);
     }
 
     //getter y setter

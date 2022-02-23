@@ -3,7 +3,7 @@ package ejercicios.agenda;
 public class Entrada {
     public static void main(String[] args) {
 
-        Persona persona = new Persona("Andrea", "47527179W", 675319384);
+        Persona persona = new Persona("Andrea", "47527777W", 675319999);
         persona.mostrarDatos();
 
         Agenda agenda = new Agenda();
@@ -27,12 +27,12 @@ public class Entrada {
         agenda.listar();
 
         System.out.println("Buscando persona");
-        agenda.buscarPersona("47527179W");
+        agenda.buscarPersona("47527777W");
 
         System.out.println("Editar persona");
-        agenda.editar("47527179W");
+        agenda.editar("47527777W");
         System.out.println("Imprimimos la editación de la persona");
-        agenda.buscarPersona("47527179W");
+        agenda.buscarPersona("47527777W");
 
     }//fin de main
 }//fin de clase
