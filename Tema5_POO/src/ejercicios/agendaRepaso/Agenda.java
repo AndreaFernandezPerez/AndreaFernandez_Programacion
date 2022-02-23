@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Agenda {
     //variables
-    ArrayList<Persona> listaPersonas;
+    private ArrayList<Persona> listaPersonas;
 
     //constructores
     public Agenda(){
@@ -54,6 +54,15 @@ public class Agenda {
             }
         }
     }
+    public void buscarPersona(String dni){
+        for (Persona item : listaPersonas) {
+            if (item.getDni().equalsIgnoreCase(dni)){
+                item.mostrarDatos();
+                break;
+            }
+        }
+    }
+
 
     //getter y setter
 

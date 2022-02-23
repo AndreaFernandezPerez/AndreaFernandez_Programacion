@@ -51,6 +51,9 @@ public class Entrada {
         System.out.println("Listamos coches");
         concesionario.listarCoches();
 
+        Electrico electricoDos = new Electrico("3456ytr", "345", 100, 1000, 60);
+        concesionario.agregrarCoche(electricoDos);
+
     }//fin de main
 
 }//fin de clase
