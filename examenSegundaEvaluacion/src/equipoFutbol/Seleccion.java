@@ -62,7 +62,9 @@ public final class Seleccion {
     }
     * */
 
-    public void verPosicion(String posicion){
+    public void verPosicionEnum(){}
+
+    /*public void verPosicion(String posicion){
         for (Persona item: listaPersonas) {
             if (item instanceof Jugador){
                 if (((Jugador) item).getPosicion().equalsIgnoreCase(posicion)){
@@ -72,6 +74,8 @@ public final class Seleccion {
             }
         }
     }
+
+     */
 
     public void verJugadores(){
         for (Persona item : listaPersonas) {
