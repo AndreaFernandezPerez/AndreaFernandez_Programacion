@@ -15,7 +15,7 @@ public abstract class Persona {
         this.apellido = apellido;
         this.dni = dni;
         this.edad = edad;
-        //meter sueldo
+        calcularSueldo();
     }
 
     //métodos

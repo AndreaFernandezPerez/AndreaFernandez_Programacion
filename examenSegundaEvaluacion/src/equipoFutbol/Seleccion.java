@@ -2,7 +2,7 @@ package equipoFutbol;
 
 import java.util.ArrayList;
 
-public class Seleccion {
+public final class Seleccion {
     //variables
     private ArrayList<Persona> listaPersonas;
     private int gastoAcumulado;
@@ -37,8 +37,30 @@ public class Seleccion {
             listaPersonas.add(persona);
             System.out.println("La persona ha sido contratada");
 
+            /* utilizando método existePersona
+            *
+            * if(!existePersona(persona.getDni())){
+            *   this.listaPersona.add(judador);
+            * }
+            * */
         }
     }
+
+    /* método existe persona
+
+    private boolean existePersona(String dni){
+
+        boolean existe = false;
+
+        for(Persona item : listaPersona){
+            if(item.getDni().equalsIgnoreCase(dni)){
+                return true;
+            }
+        }
+
+        return existe;
+    }
+    * */
 
     public void verPosicion(String posicion){
         for (Persona item: listaPersonas) {
@@ -89,13 +111,10 @@ public class Seleccion {
 
     public void mostrarGastos(){
         for (Persona item : listaPersonas) {
-            gastoAcumulado += item.sueldo;
+            gastoAcumulado += item.getSueldo();
         }
         System.out.println("El gasto total es: " + gastoAcumulado);
     }
-
-
-
 
     //getter y setter
 

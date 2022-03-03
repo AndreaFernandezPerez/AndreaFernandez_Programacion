@@ -13,6 +13,7 @@ public final class Jugador extends Persona{
         calcularSueldo();
     }
 
+
     //métodos
 
     @Override
