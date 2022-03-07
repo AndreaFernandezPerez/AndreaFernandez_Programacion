@@ -1,29 +1,24 @@
-package proyectoEnumInterfaz;
+package trabajadoresInterfaz;
 
 public abstract class Persona {
-
     //variables
-    protected String nombre, apellido;
-    protected double sueldo;
+    protected String nombre, apellido, dni;
 
     //constructores
+    public Persona(){
 
-    public Persona(){}
-
-    public Persona(String nombre, String apellido, int sueldo) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.sueldo = sueldo;
-        calcularSueldo();
     }
 
+    public Persona(String nombre, String apellido, String dni) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+    }
     //métodos
-    public abstract void calcularSueldo();
-
     public void mostrarDatos(){
-        System.out.println(nombre);
-        System.out.println(apellido);
-        System.out.println(sueldo);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("DNI: " + dni);
     }
 
     //getter y setter
@@ -45,11 +40,11 @@ public abstract class Persona {
         this.apellido = apellido;
     }
 
-    public double getSueldo() {
-        return sueldo;
+    public String getDni() {
+        return dni;
     }
 
-    public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 }//fin de clase

@@ -41,6 +41,11 @@ public class Canterano extends Persona implements Seleccionable{
 
     }
 
+    @Override
+    public void repartirPrima() {
+        this.sueldo += 200;
+        System.out.println("Se le ha reparatido al canterano una prima de 200€");
+    }
     //getter y setter
 
     public int getPosibilidades() {

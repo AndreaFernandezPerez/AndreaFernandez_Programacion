@@ -28,6 +28,14 @@ public class Seleccion {
         }
     }
 
+    public void repartirPrimaSeleccion(){
+        for (Persona item : listaPersonas) {
+            if (!(item instanceof Entrenador)){
+                ((Seleccionable) item).repartirPrima();
+            }
+        }
+    }
+
     //getter y setter
 
     public ArrayList<Persona> getListaPersonas() {

@@ -26,6 +26,9 @@ public class Entrada {
 
         espania.comprobarAtaque();
 
+        espania.repartirPrimaSeleccion();
+
+
         
     }//fin de main
 }//fin de clase

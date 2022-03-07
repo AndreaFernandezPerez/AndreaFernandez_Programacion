@@ -37,6 +37,11 @@ public final class Jugador extends Persona implements Seleccionable{
 
     }
 
+    @Override
+    public void repartirPrima() {
+        this.sueldo *= 1.20;
+        System.out.println("Se le ha repartido una prima al jugador de: " + this.sueldo * 0.20);
+    }
     //getter y setter
 
 
