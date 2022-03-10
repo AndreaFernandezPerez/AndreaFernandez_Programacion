@@ -7,6 +7,7 @@ public class Entrada {
 
         Truco magia = new Truco();
 
+
         do {
             System.out.println("¿Qué deseas saber?");
             System.out.println("1. Cómo te llamas");
