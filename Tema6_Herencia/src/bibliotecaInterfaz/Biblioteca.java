@@ -53,7 +53,7 @@ public class Biblioteca {
     }
 
     public void realizarPrestamo(Socio socio, Prestar prestable){
-        
+
         if (socio.getPrestamos().add(prestable)){
             System.out.println("Se ha realizado préstamo");
         }
