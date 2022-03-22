@@ -15,8 +15,23 @@ public class Torneo {
     }
 
     //métodos
-    public void realizarSorteo(){}
-    public void jugarPArtido(){}
+    public void realizarSorteo(ArrayList<Equipo> lista){
+        for (int i = 0; i < lista.size(); i++) {
+            Equipo equipo1 = lista.get(i);
+            for (int j = i+1; j < lista.size(); j++) {
+                Equipo equipo2 = lista.get(j);
+                listaPartidos.add(new Partido(equipo1, equipo2));
+            }
+        }
+    }
+
+    public void mostrarPartidos(){
+        for (Partido item : listaPartidos) {
+            System.out.printf("%s vs %s\n", item.getLocal(), item.visitante);
+        }
+    }
+
+    public void jugarPartido(){}
 
     //getter y setter
 
@@ -37,16 +52,20 @@ public class Torneo {
     }
 
     //CLASE ANIDADA PARTIDO - ANIDADA NORMAL
+
     class Partido{
+
         //variables anidada Partido
         private boolean jugado;
         private int numeroGoles;
-        private ArrayList<Equipo> listaEquipos;
+        private Equipo local, visitante;
 
         //constructores anidada Partido
 
-        public Partido() {
-            this.listaEquipos = new ArrayList<>();
+
+        public Partido(Equipo local, Equipo visitante) {
+            this.local = local;
+            this.visitante = visitante;
         }
 
         //métodos anidada Partido
@@ -72,28 +91,40 @@ public class Torneo {
             this.numeroGoles = numeroGoles;
         }
 
-        public ArrayList<Equipo> getListaEquipos() {
-            return listaEquipos;
+        public Equipo getLocal() {
+            return local;
         }
 
-        public void setListaEquipos(ArrayList<Equipo> listaEquipos) {
-            this.listaEquipos = listaEquipos;
+        public void setLocal(Equipo local) {
+            this.local = local;
+        }
+
+        public Equipo getVisitante() {
+            return visitante;
+        }
+
+        public void setVisitante(Equipo visitante) {
+            this.visitante = visitante;
         }
 
     }//fin clase Partido
 
     //CLASE ANIDADA STATIC EQUIPO
+
     static class Equipo{
+
         //variables
         private int puntos, golesEncuentro, nivelAtaque, nivelDefensa;
         private String nombre;
 
         //constructores
 
-        public Equipo(int puntos, String nombre) {
-            this.puntos = puntos;
+        public Equipo(int nivelAtaque, int nivelDefensa, String nombre) {
+            this.nivelAtaque = nivelAtaque;
+            this.nivelDefensa = nivelDefensa;
             this.nombre = nombre;
         }
+
 
         //métodos
 
