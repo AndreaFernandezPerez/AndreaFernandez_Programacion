@@ -61,15 +61,17 @@ public class Torneo {
         private Equipo local, visitante;
 
         //constructores anidada Partido
-
-
         public Partido(Equipo local, Equipo visitante) {
             this.local = local;
             this.visitante = visitante;
         }
 
         //métodos anidada Partido
-        public void agregarGolesLocal(){}
+        public void jugarPartido(){}
+
+        public void generarGolLocal(){
+
+        }
         public void agregarGolesVisitante(){}
         public void mostrarResultado(){}
 

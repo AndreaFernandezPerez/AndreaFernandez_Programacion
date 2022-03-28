@@ -29,7 +29,6 @@ public class ClaseGeneral {
 
     //getter y setter
 
-
     public ClaseAnidada getClaseAnidada() {
         return claseAnidada;
     }
@@ -61,6 +60,7 @@ public class ClaseGeneral {
     public void setAcierto(boolean acierto) {
         this.acierto = acierto;
     }
+
 
     //clase anidada
 
