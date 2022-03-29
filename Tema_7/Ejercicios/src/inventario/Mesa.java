@@ -1,12 +1,15 @@
 package inventario;
 
-public class Mesa extends Mueble{
+public final class Mesa extends Mueble{
     //variables
     private int capacidad;
 
     //constructores
 
-    public Mesa(String material, String peso, int precio, int capacidad) {
+    public Mesa() {
+    }
+
+    public Mesa(String material, int peso, int precio, int capacidad) {
         super(material, peso, precio);
         this.capacidad = capacidad;
     }
@@ -16,7 +19,7 @@ public class Mesa extends Mueble{
     @Override
     public void mostrarDatosMueble() {
         super.mostrarDatosMueble();
-        System.out.println("Capacidad: " +capacidad);
+        System.out.println("Capacidad: " + capacidad);
     }
 
     //getter y setter

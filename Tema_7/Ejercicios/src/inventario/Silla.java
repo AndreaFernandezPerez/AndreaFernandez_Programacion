@@ -1,12 +1,15 @@
 package inventario;
 
-public class Silla extends Mueble{
+public final class Silla extends Mueble{
     //variables
     private int patas;
 
     //constructores
 
-    public Silla(String material, String peso, int precio, int patas) {
+    public Silla() {
+    }
+
+    public Silla(String material, int peso, int precio, int patas) {
         super(material, peso, precio);
         this.patas = patas;
     }

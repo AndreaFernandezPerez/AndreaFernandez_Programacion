@@ -1,10 +1,13 @@
 package inventario;
 
-public class Lacteo extends Alimento{
+public final class Lacteo extends Alimento{
     //variables
     private int volumen;
 
     //constructores
+
+    public Lacteo() {
+    }
 
     public Lacteo(String calidad, String origen, int precio, int volumen) {
         super(calidad, origen, precio);
@@ -20,7 +23,6 @@ public class Lacteo extends Alimento{
     }
 
     //getter y setter
-
 
     public int getVolumen() {
         return volumen;

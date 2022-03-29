@@ -2,12 +2,15 @@ package inventario;
 
 public abstract class Alimento implements Inventariable{
     //variables
-    private String calidad, origen;
-    private double precio;
+    protected String calidad, origen;
+    protected double precio;
 
     //constructores
 
-    public Alimento(String calidad, String origen, int precio) {
+    public Alimento() {
+    }
+
+    public Alimento(String calidad, String origen, double precio) {
         this.calidad = calidad;
         this.origen = origen;
         this.precio = precio;
@@ -15,7 +18,13 @@ public abstract class Alimento implements Inventariable{
 
     //métodos
     public void mostrarDatos(){
-        System.out.printf("Calidad: %s\nOrigen: %s\nPrecio: %d", calidad, origen, precio);
+        System.out.printf("Calidad: %s\nOrigen: %s\nPrecio: %f", calidad, origen, precio);
+    }
+
+    @Override
+    public void calcularPrecio() {
+        setPrecio(this.precio+(this.precio*Inventariable.IVA_ALIMENTOS/100));
+        System.out.println("el precio con IVA es de " + precio);
     }
 
     //getter y setter
@@ -40,7 +49,8 @@ public abstract class Alimento implements Inventariable{
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
+
 }//fin de clase

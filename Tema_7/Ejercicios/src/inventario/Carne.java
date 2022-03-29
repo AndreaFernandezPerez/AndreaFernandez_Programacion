@@ -1,32 +1,36 @@
 package inventario;
 
-public class Carne extends Alimento{
+public final class Carne extends Alimento{
+
     //variables
-    private int proteinas;
+    private int proteina;
 
-    //constructores
+    //constructor
 
-    public Carne(String calidad, String origen, int precio, int proteinas) {
-        super(calidad, origen, precio);
-        this.proteinas = proteinas;
+    public Carne() {
     }
 
-    //métodos
+    public Carne(String calidad, String origen, int precio, int proteina) {
+        super(calidad, origen, precio);
+        this.proteina = proteina;
+    }
+
+    //método
 
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
-        System.out.println("Proteinas: " + proteinas);
+        this.proteina = proteina;
     }
 
     //getter y setter
 
-    public int getProteinas() {
-        return proteinas;
+    public int getProteina() {
+        return proteina;
     }
 
-    public void setProteinas(int proteinas) {
-        this.proteinas = proteinas;
+    public void setProteina(int proteina) {
+        this.proteina = proteina;
     }
 
 }//fin de clase

@@ -9,6 +9,9 @@ public class Torneo {
 
     //constructores
 
+    public Torneo() {
+    }
+
     public Torneo(String nombre) {
         this.nombre = nombre;
         this.listaPartidos = new ArrayList();

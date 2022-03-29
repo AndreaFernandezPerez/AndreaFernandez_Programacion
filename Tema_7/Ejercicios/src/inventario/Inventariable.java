@@ -3,9 +3,10 @@ package inventario;
 public interface Inventariable {
 
     //variables
-    double IVA_MUEBLES = 0.21;
-    double IVA_ALIMENTOS = 0.10;
+    double IVA_MUEBLES = 21;
+    double IVA_ALIMENTOS = 10;
 
+    //métodos abstractos
     void calcularPrecio();
 
 }//fin de interfaz
