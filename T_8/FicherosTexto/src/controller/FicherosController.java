@@ -2,8 +2,10 @@ package controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class FicherosController {
+    Scanner sc = new Scanner(System.in);
 
     public void getFileInfo(File file){
         System.out.println("Información de fichero");
@@ -44,6 +46,44 @@ public class FicherosController {
             for (File item : ficheros) {
                 System.out.println(item.getName()); //si ponemos .getName, solo dará los nombres de los ficheros
             }
+        }
+    }
+
+    public void listParentDirectory(){
+        File file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros");
+        File[] ficherosParent = file.listFiles();
+        int contador = 0;
+        int opcion = 0;
+        System.out.println("Imprimiendo " + file.getName()); //nos dice el nombre del directorio
+        for (File item : ficherosParent) {
+            if (!item.isHidden()){ //Hidden para archivos ocultos. Lo negamos para que no salga
+                System.out.println(contador + " - " + item.getName());
+                contador++;
+            }
+        }
+        System.out.println("Que directorio quieres listar");
+        opcion = sc.nextInt();
+        if (opcion >= 0 && opcion < ficherosParent.length){
+
+        }else {
+            System.out.println("Opción incorrecta");
+        }
+    }
+
+    public void listChild(File child){
+        int contador = 0;
+        int opcion = 0;
+        File[] ficherosChild = child.listFiles();
+        for (File childItem: ficherosChild) {
+            System.out.println(contador + " - " + childItem.getName());
+            contador++;
+        }
+        System.out.println("Que opcion quieres");
+
+        if (opcion >= 0 && opcion < ficherosChild.length){
+
+        }else {
+            System.out.println("Opción incorrecta");
         }
     }
 
