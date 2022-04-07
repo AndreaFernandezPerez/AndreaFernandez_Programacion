@@ -1,7 +1,7 @@
 package controller;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FicherosController {
@@ -49,42 +49,108 @@ public class FicherosController {
         }
     }
 
-    public void listParentDirectory(){
-        File file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros");
-        File[] ficherosParent = file.listFiles();
-        int contador = 0;
-        int opcion = 0;
-        System.out.println("Imprimiendo " + file.getName()); //nos dice el nombre del directorio
-        for (File item : ficherosParent) {
-            if (!item.isHidden()){ //Hidden para archivos ocultos. Lo negamos para que no salga
-                System.out.println(contador + " - " + item.getName());
-                contador++;
+
+    // FICHEROS DE ENTRADA
+
+    //para leer un fichero por letras --> trabajamos con fileReader
+    public void lecturaFichero(File file){
+
+        //Cuando hacemos lecturas, es obligatorio crear excepciones
+
+        FileReader fileReader = null;
+
+
+        try { //el "fallo" que queremos tratrar
+            fileReader = new FileReader(file);
+            /*int lectura = fileReader.read();
+            System.out.println(lectura);*/
+            int lectura = fileReader.read();
+
+            while ((lectura = fileReader.read())!=-1){ //volvemos a reevaluar
+                System.out.println((char) lectura); //para leerlos con letras --> lo casteamos a char
+            }
+
+
+            /* NO ES RECOMENDABLE HACER ESTO
+            do {
+                lectura = fileReader.read();
+                if (lectura >-1){
+                    System.out.println(lectura);
+                }
+            }while (lectura!=-1);
+
+             */
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            // es recomendable cerrar las excepciones
+            try {
+                fileReader.close();
+            } catch (IOException | NullPointerException e) {
+                e.printStackTrace();
             }
         }
-        System.out.println("Que directorio quieres listar");
-        opcion = sc.nextInt();
-        if (opcion >= 0 && opcion < ficherosParent.length){
 
-        }else {
-            System.out.println("Opción incorrecta");
+
+    }//fin método lecturaFichero
+
+
+    //para leer un fichero por líneas --> trabajamos con bufferReader
+    public void lecturaBuffer(File file){
+
+        BufferedReader bufferedReader = null;
+        try {
+            //para leerlo, hay que "inicializar" primero la lectura por letras
+            bufferedReader = new BufferedReader(new FileReader(file));
+           // String linea = bufferedReader.readLine();
+            //System.out.println(linea);
+            String lectura = null;
+            String lecturaCompleta = "";
+            while ((lectura = bufferedReader.readLine())!= null){
+                //System.out.println(lectura);
+                lecturaCompleta += lectura;
+                lecturaCompleta += "\n";
+            }
+            System.out.println("La lectura complesta es: ");
+            System.out.println(lecturaCompleta);
+
+            //como saber cuantas vocales tengo
+            lecturaCompleta.split("a");
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }
 
-    public void listChild(File child){
-        int contador = 0;
-        int opcion = 0;
-        File[] ficherosChild = child.listFiles();
-        for (File childItem: ficherosChild) {
-            System.out.println(contador + " - " + childItem.getName());
-            contador++;
+    }// fin método lecturaBuffer
+
+
+    //FICHEROS DE SALIDA
+
+    public void escrituraFichero(File file){
+
+        FileWriter fileWriter = null;
+
+        try{
+            fileWriter = new FileWriter(file, true); //si ponemos un true lo que hace es añadir frases nuevas
+
+            fileWriter.write("Ejemplo");
+            fileWriter.write("\n");
+            fileWriter.write("esto es una nueva línea en el fichero");
+            fileWriter.write("\n");
+            fileWriter.write(101);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            try {
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        System.out.println("Que opcion quieres");
 
-        if (opcion >= 0 && opcion < ficherosChild.length){
-
-        }else {
-            System.out.println("Opción incorrecta");
-        }
-    }
+    }//fin de método escrituraFichero
 
 }//fin de clase

@@ -13,6 +13,7 @@ public class Entrada {
         File directory = null;
         File directory2 = null;
         file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/fichero.txt");
+        File file2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroEscritura.txt");
         directory = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros");
         directory2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros_nuevo");
 
@@ -23,9 +24,11 @@ public class Entrada {
         //ficherosController.getDirectoryInfo(directory);
         //ficherosController.getDirectoryInfo(directory2);
 
+        //ficherosController.lecturaFichero(file);
 
-        ficherosController.listParentDirectory();
+        //ficherosController.lecturaBuffer(file);
 
+        ficherosController.escrituraFichero(file2);
 
         sc.close();
 
