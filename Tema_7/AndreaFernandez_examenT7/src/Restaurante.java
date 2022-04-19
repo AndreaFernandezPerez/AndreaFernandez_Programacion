@@ -8,6 +8,9 @@ public final class Restaurante<T> {  //tipar tipo T?
     int contador = 0;
 
     //constructores
+    public Restaurante(){
+        this.listaPedidos = new ArrayList<>();
+    }
 
     public Restaurante(String nombre) {
         this.nombre = nombre;
@@ -17,9 +20,10 @@ public final class Restaurante<T> {  //tipar tipo T?
     //métodos
     public void colocarComensales(int numeroComensales){
 
-        if (contador < 51){
-            contador += numeroComensales;
-            System.out.println("Personas pueden comer");
+        if (numeroComensales >= 50){
+            new ExcepcionComensales("Restaurante lleno");
+        }else{
+            numeroComensales += numeroComensales;
         }
         //pendiente excepcion
     }
@@ -76,23 +80,24 @@ public final class Restaurante<T> {  //tipar tipo T?
         //variables
         private double precio;
         private int numConsumicionComida;
-        private String comida;
+        private Comida comida;
 
         //constructores
 
-        public PedidoComida() {
+        public PedidoComida(int numConsumicionComida, String name) {
         }
 
-        public PedidoComida(int numConsumicionComida, String comida) {
+        public PedidoComida(int numConsumicionComida, Comida comida) {
             this.numConsumicionComida = numConsumicionComida;
             this.comida = comida;
-            if (comida == Comida.menu.name()){
+            if (comida.equals(Comida.menu.name())){
                 precio = Comida.menu.getTarifa();
-            }else if (comida == Comida.bocadillo.name()){
+            }else if (comida.equals(Comida.bocadillo.name())){
                 precio = Comida.menu.getTarifa();
-            }else if (comida == Comida.raciones.name()){
+            }else if (comida.equals(Comida.raciones.name())){
                 precio = Comida.raciones.getTarifa();
             }
+            precioRealComida();
         }
 
         //métodos
@@ -126,11 +131,11 @@ public final class Restaurante<T> {  //tipar tipo T?
             this.numConsumicionComida = numConsumicionComida;
         }
 
-        public String getComida() {
+        public Comida getComida() {
             return comida;
         }
 
-        public void setComida(String comida) {
+        public void setComida(Comida comida) {
             this.comida = comida;
         }
     }
@@ -158,6 +163,7 @@ public final class Restaurante<T> {  //tipar tipo T?
             }else if (bebida == Bebidas.Copas.name()){
                 precioBebida = Bebidas.Copas.getTarifas();
             }
+            precioRealBebida();
         }
 
         //métodos
