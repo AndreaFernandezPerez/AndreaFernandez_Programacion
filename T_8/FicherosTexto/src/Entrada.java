@@ -14,6 +14,7 @@ public class Entrada {
         File directory2 = null;
         file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/fichero.txt");
         File file2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroEscritura.txt");
+        File file3 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroEscrituraCompleto.txt");
         directory = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros");
         directory2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros_nuevo");
 
@@ -29,6 +30,8 @@ public class Entrada {
         //ficherosController.lecturaBuffer(file);
 
         ficherosController.escrituraFichero(file2);
+
+        ficherosController.escribirFicheroCompleto(file3);
 
         sc.close();
 

@@ -8,6 +8,7 @@ public class FicherosController {
     Scanner sc = new Scanner(System.in);
 
     public void getFileInfo(File file){
+        
         System.out.println("Información de fichero");
         System.out.println("Es directorio? " + file.isDirectory());
         System.out.println("Es fichero? " + file.isFile());
@@ -152,5 +153,38 @@ public class FicherosController {
         }
 
     }//fin de método escrituraFichero
+
+    public void escribirFicheroCompleto(File file){
+
+        //lo igualamos a null para poder usarlo fuera del try
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        PrintWriter printWriter = null;
+
+        try {
+            fileWriter = new FileWriter(file);
+            printWriter = new PrintWriter(fileWriter);
+            printWriter.println("esto es una linea");
+            /*
+            bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write("esto es un ejemplo");
+            bufferedWriter.newLine();
+            bufferedWriter.write("esto es una linea nueva");
+            bufferedWriter.newLine();
+            */
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bufferedWriter != null) {
+                   // fileWriter.close();
+                    bufferedWriter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }//fin de clase

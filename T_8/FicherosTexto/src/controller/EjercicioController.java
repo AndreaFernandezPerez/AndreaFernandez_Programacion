@@ -81,4 +81,12 @@ public class EjercicioController {
     }//fin método cifrarLinea
 
 
+    // hacer un programa que pida por consola una linea y la guarde en un fichero
+    // el programa seguirá pidiendo lineas e introduciendolas en el fichero
+    // hasta que se pulse el 0
+    // cuando no se quiera continuar se imprimirá el contenido del fichero
+
+    
+
+
 }//fin de clase
