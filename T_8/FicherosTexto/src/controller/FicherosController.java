@@ -165,6 +165,8 @@ public class FicherosController {
             fileWriter = new FileWriter(file);
             printWriter = new PrintWriter(fileWriter);
             printWriter.println("esto es una linea");
+            printWriter.println("esto es un ejemplo de linea segunda");
+            printWriter.println("esto es un ejemplo de linea tercera");
             /*
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write("esto es un ejemplo");
@@ -176,6 +178,13 @@ public class FicherosController {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+
+            if (printWriter != null){
+                printWriter.close();
+            }
+        }
+
+            /*
             try {
                 if (bufferedWriter != null) {
                    // fileWriter.close();
@@ -185,6 +194,9 @@ public class FicherosController {
                 e.printStackTrace();
             }
         }
+
+             */
+
     }
 
 }//fin de clase

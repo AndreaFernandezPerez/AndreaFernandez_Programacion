@@ -1,11 +1,14 @@
 package controller;
 
-import java.io.File;
+import java.io.*;
 import java.util.Scanner;
 
 public class EjercicioController {
 
+    //palabras sueltas
     Scanner sc = new Scanner(System.in);
+    //lineas completas. Lo lee de la entrada
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
 
     public void listParentDirectory(){
@@ -81,12 +84,68 @@ public class EjercicioController {
     }//fin método cifrarLinea
 
 
+
     // hacer un programa que pida por consola una linea y la guarde en un fichero
     // el programa seguirá pidiendo lineas e introduciendolas en el fichero
     // hasta que se pulse el 0
     // cuando no se quiera continuar se imprimirá el contenido del fichero
 
-    
+    public void ejercicioLecturaEscritura(File file){
+
+        int opcion = 0;
+        String linea = "";
+        FileWriter fileWriter = null;
+        PrintWriter printWriter = null;
+
+        do {
+
+            try {
+                System.out.println("Introduce línea");
+                linea = bufferedReader.readLine(); //esto me lee la línea entera
+                System.out.println(linea);
+                fileWriter = new FileWriter(file, true); //esto me escribe la línea en el fichero de la entrada
+                printWriter = new PrintWriter(fileWriter);
+                printWriter.println(linea);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }finally {
+                if (printWriter != null){
+                    printWriter.close();
+                }
+            }
+            System.out.println("Quieres crear más línas (0(no)/1(si))");
+            opcion = sc.nextInt();
+        }while (opcion!=0);
+
+        // lectura completa del fichero
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+
+        try {
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String lectura = "";
+            String lecturaCompleta = "";
+            StringBuffer lecturaBuffered = new StringBuffer(""); // es un objeto tipo buffered que permite añadir String
+            // bufferedReader = new BufferedReader(new FileReader(file));
+            while ((lectura = bufferedReader.readLine())!= null){
+                lecturaBuffered.append(lectura + "\n"); //añadimos las diferentes líneas de golpe
+            }
+            lecturaCompleta = lecturaBuffered.toString();
+            System.out.println(lecturaCompleta);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 
 
 }//fin de clase
