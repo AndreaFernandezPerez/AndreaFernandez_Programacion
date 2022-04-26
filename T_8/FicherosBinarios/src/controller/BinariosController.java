@@ -75,8 +75,6 @@ public class BinariosController {
         }
     }
 
-
-
     /* EJERCICIO
     * con MVC hacer un programa que pida usuarios de forma recurrente
     *  con todos sus datos (nombre, apellido, pass)
@@ -86,5 +84,7 @@ public class BinariosController {
     * Cuando el usuario no quiera meter más usuarios se pedirá si quiere leer el fichero
     * En caso de decir que si apareceran los datos del usuario
     * con este formato: Nombre: XXX Apellido: XXX*/
+
+    
 
 }//fin de clase
