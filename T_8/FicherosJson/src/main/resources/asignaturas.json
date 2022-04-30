@@ -1,0 +1,290 @@
+[
+  {
+  "nombre" : "Programación",
+  "siglas" : "PRO",
+  "horas" : 8,
+  "profesor" : {
+    "nombre" : "Borja",
+    "apellido" : "Martin"},
+  "conocimiento" : [
+    "java",
+    "maven",
+    "POO"
+  ],
+  "ciclo" : "DAM | DAW",
+  "curso" : 1
+  },
+  {
+   "nombre" : "Base de Datos",
+    "siglas" : "BBDD",
+    "horas" : 6,
+    "profesor" : {
+      "nombre" : "Eduardo",
+      "apellido" : "del Olmo"
+    },
+    "conocimiento" : [
+      "MySQL",
+      "consultas",
+      "CRUD"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 1
+  },
+  {
+    "nombre" : "Entorno de desarrollos",
+    "siglas" : "ED",
+    "horas" : 3,
+    "profesor" : {
+      "nombre" : "Jesus",
+      "apellido" : "Niño"
+    },
+    "conocimiento" : [
+      "Power shell",
+      "automatizacion"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 1
+  },
+  {
+    "nombre" : "Formación y orientación laboral",
+    "siglas" : "FOL",
+    "horas" : 3,
+    "profesor" : {
+      "nombre" : "Ivan",
+      "apellido" : "Reduello"
+    },
+    "conocimiento" : [
+      "nominas",
+      "derechos y obligacines trabajador",
+      "derechos y obligaciones empleado"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 1
+  },
+  {
+    "nombre" : "Lenguaje de marcas",
+    "siglas" : "XML",
+    "horas" : 4,
+    "profesor" : {
+      "nombre" : "Eduardo",
+      "apellido" : "del Olmo"
+    },
+    "conocimiento" : [
+      "xml",
+      "json",
+      "html",
+      "css"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 1
+  },
+  {
+    "nombre" : "Sistemas informaticos",
+    "siglas" : "SI",
+    "horas" : 6,
+    "profesor" : {
+      "nombre" : "Eduardo",
+      "apellido" : "del Olmo"
+    },
+    "conocimiento" : [
+      "windows",
+      "linux",
+      "raid"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 1
+  },
+  {
+    "nombre" : "Acceso a datos",
+    "siglas" : "ADTS",
+    "horas" : 6,
+    "profesor" : {
+      "nombre" : "Eduardo",
+      "apellido" : "del Olmo"
+    },
+    "conocimiento" : [
+      "xamp"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Desarrollo de interfaces",
+    "siglas" : "DSI",
+    "horas" : 6,
+    "profesor" : {
+      "nombre" : "Borja",
+      "apellido" : "Martin"
+    },
+    "conocimiento" : [
+      "interfaz1",
+      "interfaz2"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Inglés técnico",
+    "siglas" : "ENG",
+    "horas" : 2,
+    "profesor" : {
+      "nombre" : "Margarita",
+      "apellido" : "Perez"
+    },
+    "conocimiento" : [
+      "pasado simple",
+      "pasado compuesto"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Empresa e iniciativa emprendedora",
+    "siglas" : "EIE",
+    "horas" : 3,
+    "profesor" : {
+      "nombre" : "Ivan",
+      "apellido" : "Reduello"
+    },
+    "conocimiento" : [
+      "derecho administrativo",
+      "economia basica"
+    ],
+    "ciclo" : "DAM | DAW",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Programacion de servicios y procesos",
+    "siglas" : "PSP",
+    "horas" : 4,
+    "profesor" : {
+      "nombre" : "Isaac",
+      "apellido" : "Sampedro"
+    },
+    "conocimiento" : [
+      "servicios1",
+      "servicios2"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Programación multimedia y dispositivos moviles",
+    "siglas" : "PMyDM",
+    "horas" : 4,
+    "profesor" : {
+      "nombre" : "David",
+      "apellido" : "Nuñez"
+    },
+    "conocimiento" : [
+      "app1",
+      "app2"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Sistemas de gestión empresarial",
+    "siglas" : "SGE",
+    "horas" : 5,
+    "profesor" : {
+      "nombre" : "Paloma",
+      "apellido" : "Rodriguez"
+    },
+    "conocimiento" : [
+      "gestion1",
+      "gestion2"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Proyecto de DAM",
+    "siglas" : "PDAM",
+    "horas" : 30,
+    "profesor" : {
+      "nombre" : "Borja",
+      "apellido" : "Martin"
+    },
+    "conocimiento" : [
+      "proyecto",
+      "apartados"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Formación en centros de trabajo",
+    "siglas" : "FCT",
+    "horas" : 370,
+    "profesor" : {
+      "nombre" : " ",
+      "apellido" : " "
+    },
+    "conocimiento" : [
+      "practicas empresa"
+    ],
+    "ciclo" : "DAM",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Desarrollo web en entorno del cliente",
+    "siglas" : "WEBC",
+    "horas" : 6,
+    "profesor" : {
+      "nombre" : "Francisco",
+      "apellido" : "Sanchez"
+    },
+    "conocimiento" : [
+      "cliente1",
+      "cliente2"
+    ],
+    "ciclo" : "DAW",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Desarrollo web en entorno servidor",
+    "siglas" : "WEBS",
+    "horas" : 9,
+    "profesor" : {
+      "nombre" : "Susana",
+      "apellido" : "Iglesias"
+    },
+    "conocimiento" : [
+      "servidor1",
+      "servidor2"
+    ],
+    "ciclo" : "DAW",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Despliegue de aplicaciones web",
+    "siglas" : "APPWEB",
+    "horas" : 4,
+    "profesor" : {
+      "nombre" : "Leticia",
+      "apellido" : "Rey"
+    },
+    "conocimiento" : [
+      "app web 1",
+      "app web 2"
+    ],
+    "ciclo" : "DAW",
+    "curso" : 2
+  },
+  {
+    "nombre" : "Diseño de interfaces web",
+    "siglas" : "DIWEB",
+    "horas" : 6,
+    "profesor" : {
+      "nombre" : "Alejandro",
+      "apellido" : "Gonzalez"
+    },
+    "conocimiento" : [
+      "interfaz web 1",
+      "interfaz web 2"
+    ],
+    "ciclo" : "DAW",
+    "curso" : 2
+  }
+  ]
