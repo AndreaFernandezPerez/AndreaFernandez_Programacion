@@ -143,12 +143,12 @@ public class EjercicioController {
              */
             bufferedReader = new BufferedReader(new FileReader(file));
             String lectura = "";
-            String lecturaCompleta = "";
-            StringBuffer lecturaBuffered = new StringBuffer(""); // es un objeto tipo buffered que permite añadir String
+            String lecturaCompleta = ""; // --> para lecturas pequeñas
+            StringBuffer lecturaBuffered = new StringBuffer(""); // es un objeto tipo buffered que permite añadir String. Lecturas grandes
             // bufferedReader = new BufferedReader(new FileReader(file));
             while ((lectura = bufferedReader.readLine())!= null){
                 // vamos guardando toda la lectura
-                lecturaCompleta += lectura;
+                // lecturaCompleta += lectura; --> para lecturas pequeñas
                 lecturaBuffered.append(lectura + "\n"); //añadimos las diferentes líneas de golpe
             }
             // imprimimos la lectura completa
