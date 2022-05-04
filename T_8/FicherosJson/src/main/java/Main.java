@@ -15,9 +15,9 @@ public class Main {
 
 
         JSONController controller = new JSONController();
-        controller.pasarStringJSON();
+        // controller.pasarStringJSON();
 
-        controller.lecturaJSON();
+        // controller.lecturaJSON();
 
         System.out.println("Introduce el curso");
         curso = sc.nextInt();
