@@ -11,26 +11,30 @@ public class Entrada {
 
         File file = null;
         File directory = null;
-        File directory2 = null;
         file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/fichero.txt");
+        directory = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros");
+
+        file.isDirectory(); //devuelve un boolean
+
+        File directory2 = null;
+        directory2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros_nuevo");
         File file2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroEscritura.txt");
         File file3 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroEscrituraCompleto.txt");
-        directory = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros");
-        directory2 = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros_nuevo");
 
         FicherosController ficherosController = new FicherosController();
-        //ficherosController.getFileInfo(file);
-        //ficherosController.getFileInfo(directory);
+        // ficherosController.getFileInfo(file); --> nos da toda la información del fichero que hemos preguntado en la controladora
+        // ficherosController.getFileInfo(directory);
 
-        //ficherosController.getDirectoryInfo(directory);
+        //ficherosController.getDirectoryInfo(directory); --> devuelve los nombres de los ficheros que contienen ese directorio
         //ficherosController.getDirectoryInfo(directory2);
 
         //ficherosController.lecturaFichero(file);
 
         //ficherosController.lecturaBuffer(file);
 
-        ficherosController.escrituraFichero(file2);
+        // ficherosController.escrituraFichero(file2);
 
+        // ficherosController.getFileInfo(file3);
         ficherosController.escribirFicheroCompleto(file3);
 
         sc.close();

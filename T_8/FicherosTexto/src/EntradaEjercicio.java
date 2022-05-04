@@ -9,7 +9,7 @@ public class EntradaEjercicio {
         // ejercicioController.listParentDirectory();
 
         // ejercicioController.cifrarLinea();
-        File file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroLecturaEscritura.txt.txt");
+        File file = new File("/Users/andreafernandez/Desktop/DAM/Programacion/ficheros/ficheroLecturaEscritura.txt");
 
         ejercicioController.ejercicioLecturaEscritura(file);
     }
