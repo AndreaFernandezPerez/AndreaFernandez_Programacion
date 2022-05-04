@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
         Scanner sc = new Scanner(System.in);
         int curso;
         String ciclo;
@@ -13,9 +15,9 @@ public class Main {
 
 
         JSONController controller = new JSONController();
-        // controller.pasarStringJSON();
+        controller.pasarStringJSON();
 
-        // controller.lecturaJSON();
+        controller.lecturaJSON();
 
         System.out.println("Introduce el curso");
         curso = sc.nextInt();

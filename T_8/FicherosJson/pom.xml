@@ -13,6 +13,7 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <!-- Tenemos que crear el apartado dependecies para incluir json y gson -->
     <dependencies>
 
         <dependency>

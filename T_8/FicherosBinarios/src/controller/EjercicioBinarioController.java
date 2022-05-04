@@ -83,7 +83,7 @@ public class EjercicioBinarioController {
                     // a los ficheros no se les puede hacer for
                     while ((item = (Usuario) ois.readObject())!=null){
                         mostrarDatosUsuario(item);
-                        
+
                         /*
                         if (lectura){
                             // mostrarDatosUsuario(item);

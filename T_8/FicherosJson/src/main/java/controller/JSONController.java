@@ -17,6 +17,7 @@ public class JSONController {
 
     ArrayList<Asignatura> listaAsignaturas;
 
+
     String jsonString = "{\n" +
             "  \"nombre\": \"Borja\",\n" +
             "  \"apellidos\": \"Martin Herrera\",\n" +
@@ -30,49 +31,57 @@ public class JSONController {
 
     //Esto es para pasar un STRING a un JSON
 
-
     public void pasarStringJSON(){
+        // System.out.println(jsonObject);
         // STRING -- JSON (org.json) Para convertir String en JSON
         JSONObject jsonObject = new JSONObject(jsonString);
-        // System.out.println(jsonObject);
+        System.out.println(jsonObject);
 
-        String nombre = jsonObject.getString("nombre");
+        String nombre = jsonObject.getString("nombre"); // .getString, xq sabemos que es un String
+        System.out.println(nombre); // --> Borja
         int edad = jsonObject.getInt("edad");
-        JSONArray hobbies = jsonObject.getJSONArray("hobbies");
-        System.out.println(nombre);
         System.out.println(edad);
-
+        JSONArray hobbies = jsonObject.getJSONArray("hobbies"); // JSONArray, xq hobbies es un []
+        // con JSONArray no se puede usar foreach
+        System.out.println("Tus hobbies son: ");
         for (int i = 0; i < hobbies.length(); i++) {
             System.out.println(hobbies.getString(i));
         }
-    }
+    }// fin método pasarStringJSON
 
     public void lecturaJSON(){
+        // leemos fichero
         File file = new File("src/main/resources/persona.json");
         BufferedReader bufferedReader = null;
 
-        try {
+        // leemos fichero y convertimos en un String
+        try { // cerrar finaly bufferedReader!!
             bufferedReader = new BufferedReader(new FileReader(file));
             // bufferedReader.readLine() --> Lee línea completa
             String linea = null;
+            // hay que crear un StringBuffer para que guarde todas las líneas
             StringBuffer lecturaCompleta = new StringBuffer();
 
             while ((linea = bufferedReader.readLine()) != null){
                 // cada vez que leas una línea, las vas metiendo en el StringBuffer
                 lecturaCompleta.append(linea);
             }
-            //pasar un Strig a JSON
+
+            //pasamos el Strig a JSON
 
             JSONObject jsonObject = new JSONObject(lecturaCompleta.toString());
-            //System.out.println(jsonObject);
+            //System.out.println(jsonObject); --> lee el JSON enteron sin saltos de línea
+
+            // leemos conocimientos que es un JSON Array y preguntamos por su llave/key
             JSONArray arrayConocimientos = jsonObject.getJSONArray("conocimientos");
             for (int i = 0; i < arrayConocimientos.length(); i++) {
+                //creamos un nuevo JSONObject xq conocimientos es un []de objetos
                 JSONObject conocimiento = arrayConocimientos.getJSONObject(i);
 
                 /*
                 String concepto = conocimiento.getString("concepto");
-                int experiencia = conocimiento.getInt("experiencia");
                 System.out.println(concepto);
+                int experiencia = conocimiento.getInt("experiencia");
                 System.out.println(experiencia);
                 System.out.println("Los detalles del conocimientos " + concepto + " son:");
                 JSONArray detalles = conocimiento.getJSONArray("detalle");
@@ -83,7 +92,10 @@ public class JSONController {
                 */
 
                 //convertimos más rápidamente a .java
+                // tiene que existir previamente una clase que cumpla los mismos atributos a los de json
+
                 Gson gson = new Gson();
+                // te doy el json que quiero convertir a java y la clase a donde se hace la conversión
                 Conocimiento conocimientoJava = gson.fromJson(conocimiento.toString(), Conocimiento.class);
                 System.out.println(conocimientoJava.getConcepto());
                 System.out.println(conocimientoJava.getExperiencia());
@@ -157,7 +169,7 @@ public class JSONController {
                 //leo e incluyo
                 listaAsignaturas.add(asignatura);
 
-                caracteristicasAsignaturasDos(ciclo,curso);
+                //caracteristicasAsignaturasDos(ciclo,curso);
 
             }
 
