@@ -5,6 +5,7 @@ import model.Usuario;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.ObjectOutputStream;
 
 public class EjercicioBinarioController {
 
@@ -23,21 +24,104 @@ public class EjercicioBinarioController {
 
     private ArrayList<Usuario> listaUsuarios;
 
+    public EjercicioBinarioController() {
+        listaUsuarios = new ArrayList<>();
+    }
 
-    public void escrituraUsuario(){
+    public void addUsuario(Usuario usuario){
+        listaUsuarios.add(usuario);
+    }
+
+    public void escrituraUsuario(){ // al principio pasabamos Usuario usuario
 
         File file = new File("src/resources/usuarios.bin");
-        FileOutputStream fos;
         ObjectOutputStream oos = null;
+
 
         try {
             oos = new ObjectOutputStream(new FileOutputStream(file));
+            // oos.writeObject(usuario);
+            /*
+            for (Usuario itemUser : listaUsuarios) {
+                oos.writeObject(itemUser);
+            }
+             */
+            oos.writeObject(listaUsuarios); // hace lo mismo que el for anterior
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            try {
+                if (oos != null) {
+                    oos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
 
     }// fin de método escribir usuario
+
+
+    public void mostrarDatosUsuario(Usuario usuario){
+        System.out.println("Nombre: " + usuario.getNombre());
+        System.out.println("Apellido: " + usuario.getApellido());
+        System.out.println("Pass: " + usuario.getContrasenia());
+    }
+    public void lecturaUsuario(boolean lectura){
+        File file = new File("src/resources/usuarios.bin");
+        // FileInputStream fis = null;
+        ObjectInputStream ois = null;
+
+        try {
+            ois = new ObjectInputStream(new FileInputStream(file));
+            Usuario item = null;
+            try{
+                if (!lectura){
+                    listaUsuarios = (ArrayList<Usuario>) ois.readObject();
+                }else {
+                    // a los ficheros no se les puede hacer for
+                    while ((item = (Usuario) ois.readObject())!=null){
+                        mostrarDatosUsuario(item);
+                        
+                        /*
+                        if (lectura){
+                            // mostrarDatosUsuario(item);
+                        }else {
+                            listaUsuarios.add(item); //para cargar los datos
+                        }
+                        */
+                    }
+                }
+
+            }catch (EOFException e){
+                System.out.println("Terminado de leer fichero");
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }// fin de método lecturaUsuario
+
+    public void existeFichero(){
+        File file = new File("src/resources/usuarios.bin");
+        if (file.exists()){
+            lecturaUsuario(false); // xq no quiere mostrar los datos, si no añadirlos
+        }
+
+    } // fin de método existeFichero
 
 
 

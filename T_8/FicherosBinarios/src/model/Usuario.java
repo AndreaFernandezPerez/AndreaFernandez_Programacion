@@ -2,8 +2,11 @@ package model;
 
 import java.io.Serializable;
 
-//AQUI CREAMOS EL OBJETO
+//AQUI CREAMOS EL OBJETO como lo veniamos haciendo antes
+
+// para escribirlo tiene que ser serializable, por lo que lo implementamos
 public class Usuario implements Serializable {
+
     //variables
     private String nombre, apellido, contrasenia;
 
@@ -19,16 +22,6 @@ public class Usuario implements Serializable {
     }
 
     //métodos
-
-    //método toString
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", contrasenia='" + contrasenia + '\'' +
-                '}';
-    }
 
     //getter y setter
 
@@ -56,6 +49,15 @@ public class Usuario implements Serializable {
         this.contrasenia = contrasenia;
     }
 
+    //método toString --> se llama para hacer la representación del objeto
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", contrasenia='" + contrasenia + '\'' +
+                '}';
+    }
 
 
 }//fin de clase

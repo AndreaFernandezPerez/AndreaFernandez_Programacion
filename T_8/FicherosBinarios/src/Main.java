@@ -10,7 +10,7 @@ public class Main {
         // Controlador
 
         BinariosController controller = new BinariosController();
-        controller.escribirBinario();
+        // controller.escribirBinario();
 
         controller.lecturaBinario();
 
