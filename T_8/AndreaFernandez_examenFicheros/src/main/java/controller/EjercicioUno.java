@@ -17,7 +17,7 @@ public class EjercicioUno {
         //lectura
         try {
             fr= new FileReader(file);
-            while ((lectura=fr.read())!=-1){
+            while ((lectura=fr.read())!=-1){ // .read solo le un caracter
                 //System.out.println((char) lectura);
                 codigoDescifrado = lectura / 2;
                 letraDescifrada = (char)codigoDescifrado;

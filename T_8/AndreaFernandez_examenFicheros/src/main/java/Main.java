@@ -1,6 +1,8 @@
 import controller.EjercicioDos;
 import controller.EjercicioUno;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,6 +11,10 @@ public class Main {
 
         EjercicioDos ejercicioDos = new EjercicioDos();
         //ejercicioDos.lectura();
+
+        Scanner sc = new Scanner(System.in);
+
+        sc.close();
 
 
     }// fin de main

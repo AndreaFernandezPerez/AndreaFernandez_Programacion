@@ -9,9 +9,13 @@ import java.net.URL;
 
 public class EjercicioTres {
 
+    String urlCartelera = "https://api.themoviedb.org/3/movie/now_playing?api_key=4ef66e12cddbb8fe9d4fd03ac9632f6e&language=en-US&page=1";
+    String urlProximo = "https://api.themoviedb.org/3/movie/upcoming?api_key=4ef66e12cddbb8fe9d4fd03ac9632f6e&language=en-US&page=1";
+
+
+
     public void lecturaCartelera(){
 
-        String urlCartelera = "https://api.themoviedb.org/3/movie/now_playing?api_key=4ef66e12cddbb8fe9d4fd03ac9632f6e&language=en-US&page=1";
 
         try {
             URL url = new URL(urlCartelera);
