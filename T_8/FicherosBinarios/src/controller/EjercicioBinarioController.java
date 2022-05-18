@@ -22,12 +22,16 @@ public class EjercicioBinarioController {
 
     //tenemos que escribir el usuario
 
+    //variables
     private ArrayList<Usuario> listaUsuarios;
 
+    //constructor
     public EjercicioBinarioController() {
         listaUsuarios = new ArrayList<>();
     }
 
+
+    //métodos
     public void addUsuario(Usuario usuario){
         listaUsuarios.add(usuario);
     }

@@ -23,12 +23,14 @@ public class EjercicioController {
         int contador = 0;
         int opcion = 0;
         System.out.println("Imprimiendo " + file.getName()); //nos dice el nombre del directorio (el padre), el nombre de la carpeta inicial
+
         for (File item : ficherosParent) {
             if (!item.isHidden()){ //Hidden para archivos ocultos. Lo negamos para que no salga
                 System.out.println(contador + " - " + item.getName());
                 contador++;
             }
         }
+
         System.out.println("Que directorio quieres listar");
         opcion = sc.nextInt();
         // hacemos un if, para indicar que opción tiene que estar dentro del tamaño del [] de ficherosParent, en este caso
@@ -63,8 +65,8 @@ public class EjercicioController {
                 listarChild(child.getParentFile()); // sobre el hijo q estamos listando actualmente, preguntamos por el padre
             }else {
                 //child . El método se llama a si mismo, haciendose recursivo y volviendo a listar
-                if (ficherosChild[opcion].isDirectory()){
-                    listarChild(ficherosChild[opcion]);
+                if (ficherosChild[opcion].isDirectory()){//si es una carpeta, vuelvo a llamar al método
+                    listarChild(ficherosChild[opcion]); // le pasamos el file de la posición del []
                 }else {
                     System.out.println("Error. es un fichero");
                 }

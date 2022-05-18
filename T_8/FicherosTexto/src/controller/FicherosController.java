@@ -25,15 +25,18 @@ public class FicherosController {
         }
 
         System.out.println("Permisos " + file.canWrite()); // nos permmitiria permitir escribir en el fichero
+        //file.canRead o file.canExecute si se puede leer y si se puede ejecutar. Devuelven booleanos
         System.out.println("¿Cuál es su padre? " + file.getParent()); // nos indica la carpeta anterior donde se encuentra
-        // System.out.println("¿Cuál es su hijo? " + file.list()); // saca un []String de los objetos que contienen
-        System.out.println("Nombre del archivo " + file.getName());
+        System.out.println("¿Cuál es su hijo? " + file.list()); // saca un []String de los objetos que contienen
+        file.listFiles(); // devuelve un [] de file
+        System.out.println("Nombre del archivo " + file.getName()); // devuelve el nombre del fichero
         System.out.println("Ruta absoluta " + file.getAbsolutePath());
         System.out.println("Ruta relativa " + file.getPath());
 
+
     }// fin de método getFileInfo
 
-    public void getDirectoryInfo(File file){
+     public void getDirectoryInfo(File file){
 
         // primero preguntamos si existe, para que en caso de que no, lo cree
         if (!file.exists()){
@@ -45,13 +48,14 @@ public class FicherosController {
         }
 
         if(file.isDirectory()){
-            String[] nombreFicheros = file.list(); //esto saca el nombre de los ficheros
-            //System.out.println(nombreFicheros); Hay que recorrerlo
+            String[] nombreFicheros = file.list(); //esto saca el nombre de los ficheros NO los ficheros
+            //System.out.println(nombreFicheros); solo sale el puntero. Hay que recorrerlo
             for (String nombre : nombreFicheros) {
                 System.out.println(nombre);
             }
+
             File[] ficheros = file.listFiles(); //con esto saca la ruta de los ficheros, pero hay que recorrerla
-            //System.out.println(ficheros);
+            //System.out.println(ficheros); solo sale el puntero. Hay que recorrerlo, como cualquier otro []
             for (File item : ficheros) {
                 System.out.println(item.getName());
                 //si ponemos .getName, solo dará los nombres de los ficheros
