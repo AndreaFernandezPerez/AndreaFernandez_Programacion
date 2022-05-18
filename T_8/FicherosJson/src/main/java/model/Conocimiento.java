@@ -47,7 +47,7 @@ public class Conocimiento {
         this.detalles = detalles;
     }
 
-    // implemento métodos toString
+    // implemento método toString
     @Override
     public String toString() {
         return "Conocimiento{" +
